@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Logo / Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRAFONIA"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:letterSpacing="0.2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCREEN MIRROR"
+                android:textSize="11sp"
+                android:textColor="@color/cyan"
+                android:letterSpacing="0.3"
+                android:paddingTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- Error text -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_error"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- Server URL Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SERVER URL"
+                android:textSize="10sp"
+                android:textColor="@color/cyan"
+                android:letterSpacing="0.2"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etServerUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/text_muted"
+                android:hint="ws://192.168.1.x:3000"
+                android:inputType="textUri"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:fontFamily="monospace" />
+
+            <Button
+                android:id="@+id/btnScanQr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_outline"
+                android:text="📷  SCAN QR CODE"
+                android:textColor="@color/cyan"
+                android:textSize="12sp"
+                android:letterSpacing="0.1" />
+
+        </LinearLayout>
+
+        <!-- Stream Settings Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STREAM SETTINGS"
+                android:textSize="10sp"
+                android:textColor="@color/cyan"
+                android:letterSpacing="0.2"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Quality -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="QUALITY"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_dim" />
+
+                <TextView
+                    android:id="@+id/tvQualityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="60%"
+                    android:textSize="12sp"
+                    android:textColor="@color/cyan"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekQuality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="60"
+                android:progressTint="@color/cyan"
+                android:thumbTint="@color/cyan"
+                android:layout_marginBottom="16dp" />
+
+            <!-- FPS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TARGET FPS"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_dim" />
+
+                <TextView
+                    android:id="@+id/tvFpsValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15 fps"
+                    android:textSize="12sp"
+                    android:textColor="@color/cyan"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekFps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="29"
+                android:progress="14"
+                android:progressTint="@color/cyan"
+                android:thumbTint="@color/cyan" />
+
+        </LinearLayout>
+
+        <!-- Status Card (visible while streaming) -->
+        <LinearLayout
+            android:id="@+id/statusCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_green"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <View
+                    android:id="@+id/statusDot"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/dot_yellow"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Connecting…"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvViewers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 viewers"
+                    android:textColor="@color/cyan"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Start/Stop Button -->
+        <Button
+            android:id="@+id/btnStream"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_btn_primary"
+            android:text="▶  START STREAMING"
+            android:textColor="@color/bg_dark"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>

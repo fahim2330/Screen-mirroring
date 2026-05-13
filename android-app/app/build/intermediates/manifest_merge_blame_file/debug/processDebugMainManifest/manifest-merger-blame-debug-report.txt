@@ -1,0 +1,220 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.grafonia.screenmirror"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+7-->INJECTED
+8        android:minSdkVersion="26"
+8-->INJECTED
+9        android:targetSdkVersion="34" />
+9-->INJECTED
+10
+11    <!-- Required permissions -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:5:5-67
+12-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+13-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:6:5-77
+13-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:6:22-74
+14    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+14-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:7:5-94
+14-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:7:22-91
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:8:5-68
+15-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:8:22-65
+16    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+16-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:9:5-77
+16-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:9:22-74
+17
+18    <permission
+18-->[androidx.core:core:1.12.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\30fed362a996f8fc78562ab86fe09ad8\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+19        android:name="com.grafonia.screenmirror.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+19-->[androidx.core:core:1.12.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\30fed362a996f8fc78562ab86fe09ad8\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+20        android:protectionLevel="signature" />
+20-->[androidx.core:core:1.12.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\30fed362a996f8fc78562ab86fe09ad8\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+21
+22    <uses-permission android:name="com.grafonia.screenmirror.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+22-->[androidx.core:core:1.12.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\30fed362a996f8fc78562ab86fe09ad8\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.12.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\30fed362a996f8fc78562ab86fe09ad8\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+23    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+23-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:22:5-65
+23-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:22:22-62
+24    <uses-feature
+24-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:25:5-27:36
+25        android:name="android.hardware.camera"
+25-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:26:9-47
+26        android:required="false" />
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:27:9-33
+27    <uses-feature
+27-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+28        android:name="android.hardware.camera.front"
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+29        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+30    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+31    <uses-feature
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+32        android:name="android.hardware.camera.autofocus"
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+33        android:required="false" />
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+34    <uses-feature
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+35        android:name="android.hardware.camera.flash"
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+36        android:required="false" />
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+37    <uses-feature
+37-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+38        android:name="android.hardware.screen.landscape"
+38-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+39        android:required="false" />
+39-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+40    <uses-feature
+40-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+41        android:name="android.hardware.wifi"
+41-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+42        android:required="false" />
+42-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+43
+44    <application
+44-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:11:5-38:19
+45        android:allowBackup="true"
+45-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:12:9-35
+46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+46-->[androidx.core:core:1.12.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\30fed362a996f8fc78562ab86fe09ad8\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+47        android:debuggable="true"
+48        android:extractNativeLibs="false"
+48-->INJECTED
+49        android:icon="@mipmap/ic_launcher"
+49-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:13:9-43
+50        android:label="Grafonia Mirror"
+50-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:14:9-40
+51        android:networkSecurityConfig="@xml/network_security_config"
+51-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:18:9-69
+52        android:roundIcon="@mipmap/ic_launcher"
+52-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:15:9-48
+53        android:supportsRtl="true"
+53-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:16:9-35
+54        android:testOnly="true"
+55        android:theme="@style/Theme.Grafonia" >
+55-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:17:9-46
+56
+57        <!-- Main Activity -->
+58        <activity
+58-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:21:9-30:20
+59            android:name="com.grafonia.screenmirror.ui.MainActivity"
+59-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:22:13-44
+60            android:exported="true"
+60-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:23:13-36
+61            android:screenOrientation="portrait"
+61-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:24:13-49
+62            android:windowSoftInputMode="adjustResize" >
+62-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:25:13-55
+63            <intent-filter>
+63-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:26:13-29:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:27:17-69
+64-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:27:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:28:17-77
+66-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:28:27-74
+67            </intent-filter>
+68        </activity>
+69
+70        <!-- Screen Capture Foreground Service -->
+71        <service
+71-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:33:9-36:63
+72            android:name="com.grafonia.screenmirror.service.ScreenCaptureService"
+72-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:34:13-57
+73            android:exported="false"
+73-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:35:13-37
+74            android:foregroundServiceType="mediaProjection" />
+74-->C:\Users\Fahim_\Downloads\grafonia-screen-mirror\grafonia\android-app\app\src\main\AndroidManifest.xml:36:13-60
+75
+76        <provider
+76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a84f942159e997905310fd04f42c3e3e\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+77            android:name="androidx.startup.InitializationProvider"
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a84f942159e997905310fd04f42c3e3e\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+78            android:authorities="com.grafonia.screenmirror.androidx-startup"
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a84f942159e997905310fd04f42c3e3e\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+79            android:exported="false" >
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a84f942159e997905310fd04f42c3e3e\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+80            <meta-data
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a84f942159e997905310fd04f42c3e3e\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a84f942159e997905310fd04f42c3e3e\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+82                android:value="androidx.startup" />
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a84f942159e997905310fd04f42c3e3e\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+83            <meta-data
+83-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a72b8308e5a6fef45129f61ce3e7cb01\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+84                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+84-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a72b8308e5a6fef45129f61ce3e7cb01\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+85                android:value="androidx.startup" />
+85-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\a72b8308e5a6fef45129f61ce3e7cb01\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+86            <meta-data
+86-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+87                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+88                android:value="androidx.startup" />
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+89        </provider>
+90
+91        <receiver
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+92            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+93            android:directBootAware="false"
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+94            android:enabled="true"
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+95            android:exported="true"
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+96            android:permission="android.permission.DUMP" >
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+98                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+101                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+102            </intent-filter>
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+104                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+105            </intent-filter>
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+107                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\f54ab6f000821444b192d463c9f4367a\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+108            </intent-filter>
+109        </receiver>
+110
+111        <activity
+111-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+112            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+112-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
+113            android:clearTaskOnLaunch="true"
+113-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+114            android:screenOrientation="sensorLandscape"
+114-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+115            android:stateNotNeeded="true"
+115-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+116            android:theme="@style/zxing_CaptureTheme"
+116-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+117            android:windowSoftInputMode="stateAlwaysHidden" />
+117-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Fahim_\.gradle\caches\9.4.1\transforms\432426e939888b8aa0c7fd3a4d39d0d5\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+118    </application>
+119
+120</manifest>

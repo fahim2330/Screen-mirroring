@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#070A0F</color>
+    <color name="border">#1A2535</color>
+    <color name="cyan">#00D4FF</color>
+    <color name="cyan_dark">#0099BB</color>
+    <color name="green">#00FF88</color>
+    <color name="red">#FF3860</color>
+    <color name="surface">#0C1017</color>
+    <color name="surface2">#111820</color>
+    <color name="text_dim">#5A7A9A</color>
+    <color name="text_muted">#3A5570</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFD600</color>
+    <style name="Theme.Grafonia" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cyan</item>
+        <item name="colorPrimaryVariant">@color/cyan_dark</item>
+        <item name="colorOnPrimary">@color/bg_dark</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

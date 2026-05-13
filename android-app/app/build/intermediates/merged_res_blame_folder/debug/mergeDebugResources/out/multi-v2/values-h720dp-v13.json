@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.grafonia.screenmirror.app-mergeDebugResources-32:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Fahim_\\.gradle\\caches\\9.4.1\\transforms\\3969f89346de637e0ad982302e59cf31\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
